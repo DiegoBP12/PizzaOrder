@@ -1,0 +1,27 @@
+﻿#h5_login_signup{
+    color: white;
+    text-align: center;
+    font-weight: 150;
+    font-size: x-large;
+}
+#login_img, #signup_img {
+    margin-top: 2px;
+    height: 50px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#login_img:hover , #signup_img:hover{
+    filter: drop-shadow(3px 3px 4px gray) contrast(110%);
+}
+#login-signup_div{
+    text-align: center;
+}
+
+#hr_total, #hr_totali {
+    margin-left:5%;
+    margin-right:5%;
+    width: 90%;
+    border: .5px solid lightgray;
+}

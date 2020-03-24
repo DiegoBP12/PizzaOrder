@@ -1,0 +1,92 @@
+﻿@page
+@model TotalModel
+@{
+    ViewData["Title"] = "Confirmación de orden";
+}
+
+
+
+<div style="height:3rem;"></div>
+<div>
+    <div id="sizes_tab" class="step">Tamaño</div><div id="ingr_tab" class="step">Ingredientes</div><div class="step step_selected">Envio</div>
+</div>
+<div id="size_div">
+    <form id="form3" runat="server">
+        <div>
+            <h1 id="h1_precio" class="price-lable">
+                <label>Tu total es de:</label>
+                <label id="lblTotal"></label>
+            </h1>
+        </div>
+    </form>
+    <form id="form4" runat="server">
+        <br />
+        <hr id="hr_total" align="center" />
+        <div>
+            <h5 id="h5_login_signup">
+                &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; Registrate &nbsp; - o - &nbsp;Crea una cuenta
+            </h5>
+            <div id="login-signup_div">
+                <img id="login_img" src="~/multimedia/Login.png" />
+                <div style="width: 20px; display: inline-block; color:white;text-align:center;">|</div>
+                <img id="signup_img" src="~/multimedia/Signup.png" />
+            </div>
+            <br />
+            <hr id="hr_totali" />
+        </div>
+    </form>
+    <!-- <div class="container-contact100"> -->
+    <div class="wrap-contact100">
+        <br />
+        <form id="addr-form" class="contact100-form validate-form">
+
+            <div class="wrap-input100 validate-input bg1" data-validate="Por favor, escriba su nombre">
+                <span class="label-input100">Nombre Completo *</span>
+                <input id="name-input" class="input100" type="text" name="name" placeholder="Nombre y Apellidos">
+            </div>
+
+            <div class="wrap-input100 validate-input-email bg1 rs1-wrap-input100" data-validate="Ingrese un correo valido (e@a.x)">
+                <span class="label-input100">Email</span>
+                <input id="email-input" class="input100" type="text" name="email" placeholder="ej. ejemplo@correo.com ">
+            </div>
+
+            <div class="wrap-input100  validate-input-phone  bg1 rs1-wrap-input100" data-validate="Ingrese un número valido">
+                <span class="label-input100">Teléfono *</span>
+                <input id="phone-input" class="input100" type="text" name="phone" placeholder="Número de teléfono" PostBackURL="">
+            </div>
+
+            <div class="wrap-input100 validate-input bg1 address-field" data-validate="Ingrese una dirección ">
+                <span class="label-input100">Dirección (Calle y Número) *</span>
+                <input id="street-input" class="input100" type="text" name="street_n_number" placeholder="ej. Calle 3023 ">
+            </div>
+            <div class="wrap-input100 validate-input-zip bg1 rs1-wrap-input100 zip-field" data-validate="Ingrese un CP valido">
+                <span class="label-input100">Código Postal *</span>
+                <input id="zip-input" class="input100" type="text" name="zip" placeholder="ej. 00000 ">
+            </div>
+        </form>
+    </div>
+    <!-- </div> -->
+    <br />
+</div>
+<div class="footer-next">
+    <input type="button" class="next" id="btnBackI" onclick="goBackIngr()" value="Regresar" />
+    <!--<input type="button" class="next" id="btnConfirmo" onclick="confirmOrder()" value="Confirmar Orden" />-->
+    <button type="submit" class="next" id="btnConfirmo" form="addr-form">Confirmar Orden</button>
+</div>
+
+<script>var sizesTab = document.getElementById("sizes_tab");
+    var ingridientTab = document.getElementById("ingr_tab");
+
+    ingridientTab.onclick = function () {
+        goBackIngr();
+    }
+
+    sizesTab.onclick = function () {
+        goBackSize();
+    }</script>
+
+<!--===============================================================================================-->
+<script src="~/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+
+<script src="~/js/main.js"></script>
