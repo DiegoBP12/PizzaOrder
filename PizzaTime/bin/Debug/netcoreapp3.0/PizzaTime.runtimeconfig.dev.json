@@ -1,8 +1,0 @@
-{
-  "runtimeOptions": {
-    "additionalProbingPaths": [
-      "/Users/othon.escandon/.dotnet/store/|arch|/|tfm|",
-      "/Users/othon.escandon/.nuget/packages"
-    ]
-  }
-}
