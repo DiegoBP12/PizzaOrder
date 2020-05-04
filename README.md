@@ -43,7 +43,7 @@ Para poder realizar el despliegue de nuestra aplicación lo primero que haremos 
 
 Una vez creado el proyecto pasaremos a elegir una tecnología en el catalogo de tecnologías (Browse Catalog)
 
---add image---
+<img src="img/BrowseCatalog.png">
 
 Esto nos llevara a ver el catalogo de tecnologías, donde seleccionaremos *.NET Core*.
 Nos mostrará una pantalla en la cual daremos siguiente y le pondremos un nombre a la aplicación en el campo *Application Name*. Recomendamos usar un nombre descriptivo.
