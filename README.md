@@ -50,17 +50,20 @@ Nos mostrará una pantalla en la cual daremos siguiente y le pondremos un nombre
 <img src="img/SelectTechnology.png">
 
 El siguiente paso será poner la liga del repositorio, utilizaremos la liga ssh que genera GitHub, en el campo *Git Repository*.
+
 <img src="img/Repo_ssh_url.png">
 
 >el campo de versión lo dejaremos como está, 2.1
 >en caso de que nuestro repositorio fuese público y el código que deseáramos desplegar se encontrase en la rama master, podríamos solo asegurarnos de apuntar a donde viviría nuestro *dockerfile* y habríamos terminado.
 
 Daremos clic en *advanced options* lo que nos mostrará más opciones de configuración
+
 <img src="img/AdvanceOptions.png">
 
 
 En el campo *Git Reference* pondremos el nombre de la rama, en nuestro caso `Pizza-Order-dotNetv2-1` que es donde se encuentra la versión en *.NET Core* 2.1.
  En *Context Dir* ingresaremos la dirección en la que viviría nuestro *dockerfile* `/Pizza-Order-2.1`. Ahora, hagamos uso de la seguridad y agreguemos un secreto
+
 <img src="img/ApuntarRepo.png">
  
  
@@ -74,7 +77,11 @@ En el campo *Git Reference* pondremos el nombre de la rama, en nuestro caso `Piz
  
  Cuando estemos en configuración del lado izquierdo veremos una opción que dice *Deploy Key*. Crearemos una nueva llave de despliegue en *add deploy key*
  
+<img src="img/AddDeployKey.png">
+ 
  En este lugar copiaremos el contenido del archivo `id_rsa.pub` en el campo correspondiente, después de nombrar esta llave de despliegue. Recuerda que es mejor usar un nombre descriptivo para identificarlas fácilmente.
+ 
+<img src="img/pubkey.png">
  
  Una vez guardada la llave pública continuaremos con el despliegue en *Openshift*. Crearemos un secreto nuevo, le daremos un nombre descriptivo y cambiaremos el tipo de autenticación a *ssh key*. Copiaremos nuestra llave ssh, la privada, aquí. *Openshift* también nos da la facilidad de subir el archivo `ìd_rsa`. Creamos el secreto
  <img src="img/CrearSecreto.png">
@@ -92,6 +99,8 @@ En el campo *Git Reference* pondremos el nombre de la rama, en nuestro caso `Piz
  Lo que *Openshift* está haciendo es ir a consultar el repositorio, donde se encuentra nuestro código. Empezar a montar un *dockerfile* con el cual creara un contenedor y así subir este al clúster.  Y lo mejor, es que no tendremos que preocuparnos de esto.
  
  Una vez que termine de construir el contenedor y subir la imagen, levantara la aplicación en un *pod*, el cual escalar a gusto. Cuando este disponible este *pod* podremos ingresar a nuestra aplicación a través de la ruta que genera. esta ruta ya es pública y cualquiera de nuestros usuarios podrá ingresar.
+ 
+ <img src="img/complete.png">
  
  # ¡Felicidades!, has desplegado una aplicación en *Openshift*
  ### Usando tecnología *.NET* y sin necesidad de crear un *dockerfile*
